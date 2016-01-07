@@ -29,13 +29,32 @@ def madLib(list):
                 list.append(raw_input())
             elif len(list) == 2:
                 print "Give me a number."
-                list.append(raw_input())
+
+                num1 = raw_input()
+
+# I used try/except to test if the instance is true or false.
+# If I use an if/else statement I get an error.
+                try:
+                    isinstance(int(num1), int)
+                    list.append(num1)
+                except Exception:
+                    print "You didn't give me a number."
+                    pass
+
             elif len(list) == 3:
                 print "What's your favorite food?"
                 list.append(raw_input())
             elif len(list) == 4:
                 print "Give me another number."
-                list.append(raw_input())
+
+                num2 = raw_input()
+
+                try:
+                    isinstance(int(num2), int)
+                    list.append(num1)
+                except Exception:
+                    print "You didn't give me a number."
+                    pass
 
 # if statments used to see if a plural word is needed by adding an "s" to the end of one of the
 # list elements for each statement.
