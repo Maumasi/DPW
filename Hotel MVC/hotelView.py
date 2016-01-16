@@ -7,18 +7,18 @@ class HotelView(object):
 
         self.__logged_in = False
 
-# Private method in used only in this class
+# Private method used used to display data in a readable format
     def __get_data(self, data):
 
         print "\nWelcom " + data["user"] + "! Here is your reservation with us:\n" \
                     "Reservation Date: " + data["reservation_date"] +"\n" \
                     "Nights reserved: " + str(data["nights_reserved"]) + "\n" \
                     "Room: " + data["room_number"] + "\n" \
-                    "\nCard on file:\n " \
-                    "   Type: " + data["credit_card"]["card_type"] + "\n " \
-                    "   Card Number: " + str(data["credit_card"]["card_number"]) + "\n " \
+                    "Card on file:\n " \
+                    "* Type: " + data["credit_card"]["card_type"] + "\n " \
+                    "* Card Number: " + str(data["credit_card"]["card_number"]) + "\n " \
 
-
+# Method for gathering user name and password
     def login_user(self):
         print "\n---- Login -----"
         return {"user" : raw_input("\nEnter name:\n"), "password" : raw_input("Enter password:\n")}
@@ -57,7 +57,7 @@ class HotelView(object):
             else:
                 print "\nYou didn't type: \"Y\" or \"N\""
 
-
+# Method for gathering new reservation info
     def new_reservation(self):
         user = {}
         print "\n---- Make a new reservation -----"
@@ -69,6 +69,7 @@ class HotelView(object):
         user["credit_card"] = {"card_type" : raw_input("\nEnter your credit card type:\n"), "card_number" : raw_input("\nEnter your credit card number:\n")}
         return user
 
+# Method to great the user
     def intro_prompt(self):
 
         answered = False
@@ -76,9 +77,8 @@ class HotelView(object):
 
             print "\nAre you logging in or making a new reservation?"
 
-            answer =  raw_input(" * Login type [login] \n"
-                                " * Make a new reservation type [new]\n")
-
+            answer =  raw_input("* Type \"login\" to see your reservation. \n"
+                                "* Type \"new\" to make a new reservation. \n")
 
             if answer == "login":
                 answered = True
@@ -90,5 +90,4 @@ class HotelView(object):
 
             else:
                 print "\nPlease type [login] or [new]\n"
-
 

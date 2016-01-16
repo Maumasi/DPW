@@ -6,13 +6,13 @@ class HotelController(object):
     def __init__(self):
         # print "HotelGest created"
 
-        # talk to model
+        # instantiate  Model
         self.__model = HotelModel()
 
-        # talk to view
+        # instantiate  View
         self.__view = HotelView()
 
-# Method for logging in
+# Privet method for logging in
     def __login(self):
         # user {name : "", password : ""}
         user = self.__view.login_user()
@@ -42,7 +42,7 @@ class HotelController(object):
                         # test if there is a match again. returns a boolean
                         logged_in = self.__view.analyse_data(self.__model.get_data(logged_in))
 
-# Method for making a new reservation
+# Privet method for making a new reservation
     def __make_reservation(self):
         reservation = self.__view.new_reservation()
         self.__model.set_new_reservation(reservation)
