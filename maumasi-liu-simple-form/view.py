@@ -43,7 +43,7 @@ class Body(Page):
             <input type="submit" value="Submit">
         '''
 
-    def html_complile(self,user):
+    def result(self,user):
         self.hi = '''<p>Hi {user}</p>'''
         return (self.hi).format(**locals())
 

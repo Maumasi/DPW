@@ -1,29 +1,27 @@
 from view import Body
+from model import *
 
 class Controller(object): # Controller
     def __init__(self, app):
         # app.response.write('My app')
-        print "MyApp started"
+        print "controller started"
 
-        self.user = [{}]
+        self.user = {}
 
-        # p = Page()
-        b = Body()
+        view = Body()
+        # model = Model()
 
-        b.title = "Beer"
-        # html = p.print_out()
-        # app.response.write(html)
-        # print app.request.GET["user"]
+        view.title = "Beer"
 
         if app.request.GET:
-            self.user[0]["user"] = app.request.GET["user"]
-            self.user[0]["movie"] = app.request.GET["movie"]
+            self.user["user"] = app.request.GET["user"]
+            self.user["movie"] = app.request.GET["movie"]
 
-            b.body = b.html_complile(self.user[0]["user"])
-            app.response.write(b.html())
+            view.body = view.result(self.user[0]["user"])
+            app.response.write(view.html())
 
         else:
-            b.html()
-            b.body = b.form
-            app.response.write(b.html())
+            view.html()
+            view.body = view.form
+            app.response.write(view.html())
 

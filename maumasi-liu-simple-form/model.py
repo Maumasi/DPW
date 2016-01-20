@@ -4,18 +4,16 @@ class Model(object): # Controller
         # app.response.write('My app')
         print "model started"
 
-        self.__app = app
-        self.user_input = []
-        self.user = [{}]
+        self.user = {}
 
-        self.user_input = self.__app.request.GET
-        self.user[0]["user"] = self.user_input["user"]
-        self.user[0]["movie"] = self.user_input["movie"]
-        # self.user[0][]
+        input = app.request.GET
+        # self.user["user"] = input["user"]
+        # self.user["movie"] = input["movie"]
 
 
-        self.html = app.response.write()
         print self.user
+
+
 
     #
     # def html(self,el):
