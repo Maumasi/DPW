@@ -74,18 +74,26 @@ class Body(Page):
         genre = game["genre"]
 
         self.title = "Gamer Rants - " + title + " Review"
+        self.css = "css/blog.css"
+        self.js = ""
 
         blog = '''
         <section>
-        <p>Games &rang;  Reviews &rang;  {genre} &rang;  {title}
+            <p id="bread-crumbs">Games  &rang;  Reviews  &rang;  {genre}  &rang;  {title}</p>
             <article>
-
-                <h1>{title} Review<h1>
-
-                <p><strong>By {author}</strong>
-                on {date}</p>
-
-                <p>{review}</p>
+                <header>
+                    <h1>{title} Review</h1>
+                    <div id="publish">
+                        <div id="gr-logo">GR</div>
+                        <p><span id="author">By {author}</span> <span id="date">{date}</span></p>
+                    </div>
+                </header>
+                <div id="content">
+                    <p id="review">{review}</p>
+                </div>
+                <footer>
+                    <p><span>Gamer Rants</span> <span>All user generated content is property of Gamer Rants &reg; Inc.</span></p>
+                </footer>
             </article>
         </section>
         '''

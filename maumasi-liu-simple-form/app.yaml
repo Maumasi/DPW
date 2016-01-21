@@ -21,9 +21,17 @@ handlers:
   upload: css/form.css
   static_files: css/form.css
   
+- url: /css/blog.css
+  upload: css/blog.css
+  static_files: css/blog.css
+  
 - url: /imgs/borderlands_sniper-01.png
   upload: imgs/borderlands_sniper-01.png
   static_files: imgs/borderlands_sniper-01.png
+  
+- url: /imgs/nailani_gaming.jpg
+  upload: imgs/nailani_gaming.jpg
+  static_files: imgs/nailani_gaming.jpg
 
 - url: /js/app.js
   upload: js/app.js
