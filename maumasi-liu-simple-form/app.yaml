@@ -5,9 +5,29 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
+- url: /https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+  upload: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+  static_files: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+
+- url: /https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js
+  upload: https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js
+  static_files: https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js
+
+- url: /https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css
+  upload: https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css
+  static_files: https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css
+
+- url: /css/main.css
+  upload: css/main.css
+  static_files: css/main.css
+  
+- url: /imgs/borderlands_sniper-01.png
+  upload: imgs/borderlands_sniper-01.png
+  static_files: imgs/borderlands_sniper-01.png
+
+- url: /js/app.js
+  upload: js/app.js
+  static_files: js/app.js
 
 - url: .*
   script: main.app

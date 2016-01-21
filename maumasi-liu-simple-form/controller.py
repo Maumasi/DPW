@@ -4,24 +4,30 @@ from model import *
 class Controller(object): # Controller
     def __init__(self, app):
         # app.response.write('My app')
-        print "controller started"
+        # print "controller started"
 
-        self.user = {}
+        self.author = {}
 
         view = Body()
-        # model = Model()
 
-        view.title = "Beer"
+        view.title = "Game Reviews"
 
         if app.request.GET:
-            self.user["user"] = app.request.GET["user"]
-            self.user["movie"] = app.request.GET["movie"]
+            self.author["author"] = app.request.GET["author"]
+            self.author["title"] = app.request.GET["title"]
+            self.author["review"] = app.request.GET["review"]
+            self.author["genre"] = app.request.GET["genre"]
+            self.author["date"] = app.request.GET["date"]
 
-            view.body = view.result(self.user[0]["user"])
+            view.body = view.result(self.author)
             app.response.write(view.html())
 
         else:
+
+            print self.author
             view.html()
             view.body = view.form
             app.response.write(view.html())
+
+
 
