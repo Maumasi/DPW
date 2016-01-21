@@ -3,8 +3,8 @@ class Page(object): # View
     def __init__(self):
         print "view started"
 
-        self.title = "TGB - Review Form"
-        self.css = "css/main.css"
+        self.title = "Gamer Rants - Rant Form"
+        self.css = "css/form.css"
         self.js = "js/app.js"
         self.body = ""
 
@@ -73,11 +73,11 @@ class Body(Page):
         review = game["review"]
         genre = game["genre"]
 
-        self.title = title + " Review"
+        self.title = "Gamer Rants - " + title + " Review"
 
         blog = '''
         <section>
-        <p>Games > Genre > {genre}
+        <p>Games &rang;  Reviews &rang;  {genre} &rang;  {title}
             <article>
 
                 <h1>{title} Review<h1>

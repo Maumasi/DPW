@@ -17,9 +17,9 @@ handlers:
   upload: https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css
   static_files: https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css
 
-- url: /css/main.css
-  upload: css/main.css
-  static_files: css/main.css
+- url: /css/form.css
+  upload: css/form.css
+  static_files: css/form.css
   
 - url: /imgs/borderlands_sniper-01.png
   upload: imgs/borderlands_sniper-01.png

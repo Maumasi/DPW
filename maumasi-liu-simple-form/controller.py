@@ -10,8 +10,6 @@ class Controller(object): # Controller
 
         view = Body()
 
-        view.title = "Game Reviews"
-
         if app.request.GET:
             self.author["author"] = app.request.GET["author"]
             self.author["title"] = app.request.GET["title"]
