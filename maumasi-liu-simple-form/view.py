@@ -1,7 +1,7 @@
 
 class Page(object): # View
     def __init__(self):
-        print "view started"
+        # print "view started"
 
         self.title = "Gamer Rants - Rant Form"
         self.css = "css/form.css"
@@ -27,8 +27,8 @@ class Page(object): # View
             <p><a target="_blank" href="https://www.e3expo.com" >Look for us at <span>E3 2016</span></a></p>
         </nav>
 
-
         {self.body}
+
         <script type="text/javascript" src="{self.js}"></script>
     </body>
 </html>
@@ -85,7 +85,7 @@ class Body(Page):
                     <h1>{title} Review</h1>
                     <div id="publish">
                         <div id="gr-logo">GR</div>
-                        <p><span id="author">By {author}</span> <span id="date">{date}</span></p>
+                        <p><span id="author">By {author}</span> <span id="date">Published on {date}</span></p>
                     </div>
                 </header>
                 <div id="content">

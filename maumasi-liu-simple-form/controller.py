@@ -3,11 +3,9 @@ from model import *
 
 class Controller(object): # Controller
     def __init__(self, app):
-        # app.response.write('My app')
         # print "controller started"
 
         self.author = {}
-
         view = Body()
 
         if app.request.GET:
@@ -21,10 +19,8 @@ class Controller(object): # Controller
             app.response.write(view.html())
 
         else:
-
-            print self.author
-            view.html()
             view.body = view.form
+            view.html()
             app.response.write(view.html())
 
 
