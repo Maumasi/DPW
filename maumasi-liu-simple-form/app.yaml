@@ -29,9 +29,9 @@ handlers:
   upload: imgs/borderlands_sniper-01.png
   static_files: imgs/borderlands_sniper-01.png
   
-- url: /imgs/nailani_gaming.jpg
-  upload: imgs/nailani_gaming.jpg
-  static_files: imgs/nailani_gaming.jpg
+- url: /imgs/baby_gamer.jpg
+  upload: imgs/baby_gamer.jpg
+  static_files: imgs/baby_gamer.jpg
 
 - url: /js/app.js
   upload: js/app.js
